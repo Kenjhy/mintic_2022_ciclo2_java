@@ -8,7 +8,7 @@ SALIDAS : raiz_positiva, raiz_negativa
 package tallermintic01;
 
 import java.util.Scanner;
-import java.math.*;
+import java.lang.Math.*;
 
 public class Cuadratica {
     
