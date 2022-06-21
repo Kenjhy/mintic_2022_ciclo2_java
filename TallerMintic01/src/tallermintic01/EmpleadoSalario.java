@@ -37,11 +37,10 @@ public class EmpleadoSalario {
     {
         float salario = cantidad_horas * valor_hora;
         return salario;
-    }
-    
+    }    
     public static void salida(int cantidad_horas, float valor_hora, String nombreEmpleado, float salario)
     {
-        System.out.println("NOMBRES\tHORAS TRABAJADAS VALOR HORA SALARIO INTEGRAL");
-        System.out.println(nombreEmpleado +  "\t\t"  + cantidad_horas + "\t\t" + valor_hora + "\t\t" + salario);     
+        System.out.println("NOMBRES\t\tHORAS TRABAJADAS\tVALOR HORA\tSALARIO");
+        System.out.println(nombreEmpleado+"\t\t"+cantidad_horas+"\t\t\t"+valor_hora+"\t\t\t"+salario);     
     }
 }
