@@ -18,15 +18,30 @@ public class EmpleadoSalario {
      */
     public static void main(String[] args) {
                        
-        Scanner salarioEmpleado = new Scanner(System.in);
-        int horas = 0;
-        int valorH = 4000;
+        int cantidad_horas = 0;
+        float valor_hora = 0;
         String nombreEmpleado = "";
-        System.out.print("Nombre: "); nombreEmpleado = salarioEmpleado.nextLine();
-         System.out.print("Horas trabajadas"); nombreEmpleado = salarioEmpleado.nextLine();
         
-        double salario = 0;
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Nombre: "); nombreEmpleado = scanner.nextLine();
+        System.out.print("cantidad horas: "); cantidad_horas = scanner.nextInt();
+        System.out.print("valor hora: "); valor_hora = scanner.nextFloat();
+        
+        float salario = calcular_salario(cantidad_horas, valor_hora);
+        salida(cantidad_horas, valor_hora, nombreEmpleado, salario);
 
     }
     
+    public static float calcular_salario(int cantidad_horas, float valor_hora)
+    {
+        float salario = cantidad_horas * valor_hora;
+        return salario;
+    }
+    
+    public static void salida(int cantidad_horas, float valor_hora, String nombreEmpleado, float salario)
+    {
+        System.out.println("NOMBRES\tHORAS TRABAJADAS VALOR HORA SALARIO INTEGRAL");
+        System.out.println(nombreEmpleado +  "\t\t"  + cantidad_horas + "\t\t" + valor_hora + "\t\t" + salario);     
+    }
 }
