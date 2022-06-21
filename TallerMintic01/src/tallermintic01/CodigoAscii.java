@@ -16,7 +16,7 @@ public class CodigoAscii {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int codigo = 49;
+        int codigo = 48;
         
         System.out.print("EL CARACTER DEL ASCII " + codigo + " ES " + (char)codigo);
     }
