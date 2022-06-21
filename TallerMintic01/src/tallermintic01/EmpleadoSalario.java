@@ -42,9 +42,14 @@ public class EmpleadoSalario {
     {
         System.out.println("NOMBRES\t\tHORAS TRABAJADAS\tVALOR HORA\tSALARIO");
 
+
         System.out.println(nombreEmpleado+"\t\t"+cantidad_horas+"\t\t\t"+valor_hora+"\t\t\t"+salario);     
 
         System.out.println(nombreEmpleado +  "\t\t"  + cantidad_horas + "\t\t" + valor_hora + "\t" + salario);     
+
+
+        System.out.println(nombreEmpleado+"\t\t"+cantidad_horas+"\t\t\t"+valor_hora+"\t\t"+salario);     
+    
 
     }
 }
