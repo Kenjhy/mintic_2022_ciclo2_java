@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package tallermintic01;
-
 /**
  *
  * @author cristian.quiza

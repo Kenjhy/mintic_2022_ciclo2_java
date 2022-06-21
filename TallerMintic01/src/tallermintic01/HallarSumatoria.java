@@ -28,25 +28,44 @@ public class HallarSumatoria {
         System.out.print("N1: "); N1 = scanner.nextInt();
         System.out.print("N2: "); N2 = scanner.nextInt();
         
-        //suma = Suma(N1,N2);
-        //diferencia = Diferencia(N1,N2);
+        suma = Suma(N1,N2);
+        diferencia = Diferencia(N1,N2);
         producto = Producto(N1,N2);
         cociente = Cociente(N1,N2);
-        //residuo = Residuo(N1,N2);
+        residuo = Residuo(N1,N2);
         
-        System.out.println("N1: " + N1+ " N2: " + N2 +  " SUMA: " + suma + "DIFERENCIA PRODUCTO COCIENTE RESIDUO");
+        System.out.println("N1 " + " " + " N2 " +" "+ " SUMA = " + suma + " DIFERENCIA = " 
+                            + diferencia + " PRODUCTO = " + producto + " COCIENTE = " 
+                            + cociente + " RESIDUO = " + residuo);
+    }
+    
+    public static double Suma(double N1,double N2)
+    {
+       suma = N1 + N2;
+       return suma;
+    }
+    
+    public static double Diferencia(double N1,double N2)
+    {
+       diferencia = N1 - N2;
+       return diferencia;
     }
     
     public static double Producto(double N1,double N2)
     {
-       producto = N1/N2;
+       producto = N1 * N2;
        return producto;
     }
     
-        public static double Cociente(double N1,double N2)
+    public static double Cociente(double N1,double N2)
     {
-       cociente = 0;
+       cociente = N1 / N2;
        return cociente;
     }
     
+    public static double Residuo(double N1,double N2)
+    {
+       residuo = N1 % N2;
+       return residuo;
+    }
 }
