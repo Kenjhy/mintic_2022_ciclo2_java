@@ -1,20 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package tallermintic02;
-
-import java.util.Scanner;
-
-/**
- *
- * @author daniel.vargas
- */
-public class HallarSumatoria {
-    
-    
-    static double suma = 0;
+static double suma = 0;
     static double diferencia = 0;
     static double producto = 0;
     static double cociente = 0;
@@ -30,11 +14,11 @@ public class HallarSumatoria {
         System.out.print("numero1: "); numero1 = scanner.nextInt();
         System.out.print("numero2: "); numero2 = scanner.nextInt();
         
-        double suma = calcular(numero1, numero2, 1);
+        double suma = calcular(numero1, numero2, operador);
         double diferencia = calcular(numero1, numero2, operador);
-        double producto = calcular(numero1, numero2, 3);
-        double cociente = calcular(numero1, numero2, 4);
-        double residuo = calcular(numero1, numero2, 5);
+        double producto = calcular(numero1, numero2, operador);
+        double cociente = calcular(numero1, numero2, operador);
+        double residuo = calcular(numero1, numero2, operador);
         
         System.out.println("numero1 " + " " + " numero2 " +" "+ " SUMA = " + suma + " DIFERENCIA = " 
                             + diferencia + " PRODUCTO = " + producto + " COCIENTE = " 
@@ -77,34 +61,33 @@ public class HallarSumatoria {
     
      public static double calcular(double numero1, double numero2, int operador)
      {
-        
+        double resultado = 0; 
         if(operador == 1)
         {
-            suma = Suma(numero1,numero2);
+            resultado = Suma(numero1,numero2);
         }
         
         if(operador == 2)
         {
-            diferencia = Diferencia(numero1,numero2);
+            resultado = Diferencia(numero1,numero2);
         }
         
         if(operador == 3)
         {
-            producto = Producto(numero1,numero2);
+            resultado = Producto(numero1,numero2);
         }
         
         
         if(operador == 4)
         {
-           cociente = Cociente(numero1,numero2);
+           resultado = Cociente(numero1,numero2);
         }
         
         if(operador == 5)
         {
-           residuo = Residuo(numero1,numero2);
+           resultado = Residuo(numero1,numero2);
         }
         
-        double resultado = 0; 
         return resultado;
      }
 }
