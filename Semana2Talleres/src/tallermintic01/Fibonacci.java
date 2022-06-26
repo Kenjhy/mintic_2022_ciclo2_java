@@ -2,7 +2,7 @@
     SERIE DE FIBONACCI PARA N TERMINOS
     anterior - actual - resultado
  */
-package Semana2Talleres;
+package tallermintic01;
 
 /**
  *
