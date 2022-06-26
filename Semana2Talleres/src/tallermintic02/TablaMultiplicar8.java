@@ -5,6 +5,8 @@
  */
 package tallermintic02;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ASUS
@@ -15,7 +17,14 @@ public class TablaMultiplicar8 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        int n;
+        System.out.print("Introduce un número entero: ");                                                         
+        n = sc.nextInt();
+        System.out.println("Tabla del " + n);
+        for(int i = 1; i<=10; i++){
+             System.out.println(n + " * " + i + " = " + n*i);                                                     
+        }
     }
     
 }

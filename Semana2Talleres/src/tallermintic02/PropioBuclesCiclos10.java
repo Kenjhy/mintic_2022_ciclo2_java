@@ -15,7 +15,23 @@ public class PropioBuclesCiclos10 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int i = 0;
+        int j = 0;
+        do {
+            i++;
+            ++j;
+            System.out.println(i * j);
+
+        } while ((i < 10) && (j * j != 25));
+
+        i++;
+        ++j;
+        System.out.println(i * j);
+        while ((i < 10) && (j * j != 25)) {
+            i++;
+            ++j;
+            System.out.println(i * j);
+        }
     }
-    
+
 }
