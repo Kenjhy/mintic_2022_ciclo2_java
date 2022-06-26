@@ -15,7 +15,20 @@ public class PropioCondicionales13 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("Ajusta los valores voleanos segun gustes y prueba que hace: true o false");
+        if(false)
+        {
+            System.out.println("Entro al if");
+        }else if(false)
+        {
+            System.out.println("Entro al primer else if");
+        }else if(true)
+        {
+            System.out.println("Entro al segundo else if");
+        }else
+        {
+            System.out.println("Entro el esle, Condicion si no se cumplieron las anteriores");
+        }
     }
     
 }
