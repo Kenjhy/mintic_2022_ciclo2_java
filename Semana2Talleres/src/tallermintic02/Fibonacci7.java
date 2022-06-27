@@ -2,13 +2,15 @@
     SERIE DE FIBONACCI PARA N TERMINOS
     anterior - actual - resultado
  */
-package tallermintic01;
+package tallermintic02;
+
+import tallermintic01.*;
 
 /**
  *
  * @author cristian.quiza
  */
-public class Fibonacci {
+public class Fibonacci7 {
     
     public static void main(String[] args) {
         // Todo code application logic hare
