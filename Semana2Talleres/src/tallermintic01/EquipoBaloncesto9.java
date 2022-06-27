@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class EquipoBaloncesto9 {
     public static void main(String[] args) {
 
-        Scanner Teclado=new Scanner(System.in);
+        Scanner Teclado = new Scanner(System.in);
         
         System.out.print("por favor Ingresar la Altura: ");
         Double est = Teclado.nextDouble();
