@@ -16,6 +16,31 @@ public class DeterminarVocal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        char ch = 'i';
+
+        switch (ch) {
+
+            case 'a':
+
+            case 'e':
+
+            case 'i':
+
+            case 'o':
+
+            case 'u':
+
+                System.out.println(ch + " Es vocal");
+
+                break;
+
+            default:
+
+                System.out.println(ch + " No es vocal");
+
+        }
+
     }
-    
+
 }
