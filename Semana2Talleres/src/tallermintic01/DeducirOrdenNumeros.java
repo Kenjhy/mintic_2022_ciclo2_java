@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tallermintic02;
+package tallermintic01;
 
 import java.util.Scanner;
 /**
