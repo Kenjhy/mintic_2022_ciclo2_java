@@ -54,6 +54,23 @@ public class Figurasgeometricas {
     }
 
     private static void contruirTriangulo() {
+        System.out.print("\nBase: ");
+        double base = Double.parseDouble(teclado.nextLine());
+        System.out.print("\nAltura: ");
+        double base = Double.parseDouble(teclado.nextLine());
+        System.out.print("\nLado 1 : ");
+        double base = Double.parseDouble(teclado.nextLine());
+        System.out.print("\nLado 2: ");
+        double base = Double.parseDouble(teclado.nextLine());
+        System.out.print("\nLado 3: ");
+        double base = Double.parseDouble(teclado.nextLine());
+        Triangulo tr = new Triangulo(base,altura,lado1, lado2, lado3, "TRIANGULO");
+        System.out.println("Area calculada: " + tr.getArea());
+        System.out.println("Perimetro calculado: " + tr.getPerimetro());
+        System.out.println("\n");
+          
+        
+        
 
     }
 
