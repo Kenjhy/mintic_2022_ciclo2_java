@@ -6,6 +6,8 @@
 package figurasgeometricas;
 
 import Clases.Circulo;
+import Clases.Rectangulo;
+import Clases.Triangulo;
 import java.util.Scanner;
 
 /**
@@ -50,11 +52,33 @@ public class Figurasgeometricas {
     }
 
     private static void contruirRectangulo() {
-       
+       Rectangulo rectangulo = new Rectangulo(0,0,"RECTANGULO UNO", 0,0);
+        System.out.println("\n\n*** MOSTRANDO DATOS DEL RECTANGULO *** ");
+        System.out.println("\n======================================");
+        System.out.println("FIGURA: " + rectangulo.getNombre());
+        System.out.println("ANCHO: " + rectangulo.getAncho());
+        System.out.println("ALTO: " + rectangulo.getAlto());
+        System.out.println("AREA: " + rectangulo.getArea());
+        System.out.println("PERIMETRO: " + rectangulo.getPerimetro());
+        System.out.println("\n" );
+        
     }
 
     private static void contruirTriangulo() {
-        
+        System.out.print("\nBase: ");
+        double base = Double.parseDouble(teclado.nextLine());
+        System.out.print("\nAltura: ");
+        double altura = Double.parseDouble(teclado.nextLine());
+        System.out.print("\nLado 1 : ");
+        double lado1 = Double.parseDouble(teclado.nextLine());
+        System.out.print("\nLado 2: ");
+        double lado2 = Double.parseDouble(teclado.nextLine());
+        Triangulo triangulo = new Triangulo(base,altura,lado1, lado2, "TRIANGULO");
+        System.out.println("Area calculada: " + triangulo.getArea());
+        System.out.println("Perimetro calculado: " + triangulo.getPerimetro());
+        System.out.println("\n");
+ 
+
     }
 
     private static void contruirCirculo() {

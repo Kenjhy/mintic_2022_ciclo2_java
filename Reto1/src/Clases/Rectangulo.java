@@ -19,16 +19,40 @@ public class Rectangulo extends Figura{
     public Rectangulo(double alto, double ancho, String nombre, double area, double perimetro) {
         super(nombre, area, perimetro);
         Scanner teclado = new Scanner(System.in);
-        System.out.println("");
-        System.out.println("nombre rec");
+        System.out.println("\n*** INGRESANDO DATOS DEL RECTANGULO *** ");
+        System.out.println("\nNombre Rectangulo: ");
         this.nombre = teclado.nextLine();
-        System.out.println("alto");
-        this.alto = teclado.nextDouble();
-        System.out.println("ancho");
+        System.out.println("Introduzca el ancho: ");
         this.ancho = teclado.nextDouble();
+        System.out.println("Introduzca el alto: ");
+        this.alto = teclado.nextDouble();
         
         calcularArea();
         calcularPerimetro();
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
+    }
+
+    public double getPerimetro() {
+        return perimetro;
+    }
+
+    public void setPerimetro(double perimetro) {
+        this.perimetro = perimetro;
     }
 
     public double getAlto() {
@@ -36,7 +60,9 @@ public class Rectangulo extends Figura{
     }
 
     public void setAlto(double alto) {
-        this.alto = alto;
+        System.out.println("Introduzca el alto: ");
+        Scanner scanner= new Scanner(System.in);
+        this.alto = scanner.nextDouble();
     }
 
     public double getAncho() {
@@ -44,7 +70,9 @@ public class Rectangulo extends Figura{
     }
 
     public void setAncho(double ancho) {
-        this.ancho = ancho;
+        System.out.println("Introduzca el ancho: ");
+        Scanner scanner= new Scanner(System.in);
+        this.ancho = scanner.nextDouble();
     }
     
 

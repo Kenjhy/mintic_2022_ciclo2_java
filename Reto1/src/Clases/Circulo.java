@@ -38,21 +38,13 @@ public class Circulo extends Figura{
     }
 
     //Metodos propios de las clases, clic derecho, insertar codigo, geter an seter,
-    protected double jdfnksjdfn() {
-        int Radio;
-        
-        double Area = Math.PI * Math.pow(Radio, 2) ;
-        System.out.println("El área del circulo es de " + Area);
-        return Area;
-    }
-
     @Override
     protected void calcularArea() {
-        area = 
+        area = Math.PI * Math.pow(radio, 2);
     }
 
     @Override
     protected void calcularPerimetro() {
-        perimetro = 
+        perimetro = 2 * Math.PI * radio;
     }
 }
