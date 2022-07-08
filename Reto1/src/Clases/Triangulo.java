@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author cristian.quiza
+ * @author dANIEL VARGAS
  */
 public class Triangulo extends Figura{
     private double base;
@@ -24,21 +24,53 @@ public class Triangulo extends Figura{
         this.altura = altura;
         this.lado1 = lado1;
         this.lado2 = lado2;
+        
+        calcularArea();
+        calcularPerimetro();
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double getLado1() {
+        return lado1;
+    }
+
+    public void setLado1(double lado1) {
+        this.lado1 = lado1;
+    }
+
+    public double getLado2() {
+        return lado2;
+    }
+
+    public void setLado2(double lado2) {
+        this.lado2 = lado2;
     }
 
     @Override
     protected void calcularArea() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        area = (base*altura)/2;
     }
 
     @Override
     protected void calcularPerimetro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        perimetro = base + lado1 + lado2;
     }
 
-    
-    
-    
 }
     
     

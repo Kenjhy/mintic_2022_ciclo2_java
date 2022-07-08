@@ -46,9 +46,7 @@ public class Figurasgeometricas {
                 default:
                     System.out.println(" \n");
             }
-
         }
-
     }
 
     private static void contruirRectangulo() {
@@ -61,7 +59,6 @@ public class Figurasgeometricas {
         System.out.println("AREA: " + rectangulo.getArea());
         System.out.println("PERIMETRO: " + rectangulo.getPerimetro());
         System.out.println("\n" );
-        
     }
 
     private static void contruirTriangulo() {
@@ -73,20 +70,18 @@ public class Figurasgeometricas {
         double lado1 = Double.parseDouble(teclado.nextLine());
         System.out.print("\nLado 2: ");
         double lado2 = Double.parseDouble(teclado.nextLine());
-        Triangulo triangulo = new Triangulo(base,altura,lado1, lado2, "TRIANGULO");
+        Triangulo triangulo = new Triangulo(base,altura,lado1, lado2,"TRIANGULO",0,0);
         System.out.println("Area calculada: " + triangulo.getArea());
         System.out.println("Perimetro calculado: " + triangulo.getPerimetro());
         System.out.println("\n");
- 
-
     }
 
     private static void contruirCirculo() {
         System.out.println("\nRadio: ");
         double radio = Double.parseDouble(teclado.nextLine());
         Circulo circulo = new Circulo(radio, "CIRCULO UNO ", 0,0);
-        System.out.println("Area Calculada" + circulo.getArea());
-        System.out.println("Parametro Calculada" + circulo.getPerimetro());
+        System.out.println("Area Calculada: " + circulo.getArea());
+        System.out.println("Parametro Calculada: " + circulo.getPerimetro());
         System.out.println("\n");
     }
 }
