@@ -54,7 +54,7 @@ public class Figurasgeometricas {
     }
 
     private static void contruirTriangulo() {
-
+        
     }
 
     private static void contruirCirculo() {
@@ -62,6 +62,7 @@ public class Figurasgeometricas {
         double radio = Double.parseDouble(teclado.nextLine());
         Circulo circulo = new Circulo(radio, "CIRCULO UNO ", 0,0);
         System.out.println("Area Calculada" + circulo.getArea());
-        System.out.println("Parametro Calculada" + circulo.getArea());
+        System.out.println("Parametro Calculada" + circulo.getPerimetro());
+        System.out.println("\n");
     }
 }

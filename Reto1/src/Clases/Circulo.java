@@ -26,14 +26,21 @@ public class Circulo extends Figura{
                 
     }
     
+    public double getRadio() {    
+        return radio;
+    }
+
     //Setear y getear todos los atributos
-    
+    public void setRadio(double radio) {    
+        System.out.println("Ingresa el tamaño del radio: ");
+        Scanner scanner = new Scanner(System.in);
+        this.radio = scanner.nextDouble();
+    }
+
     //Metodos propios de las clases, clic derecho, insertar codigo, geter an seter,
     protected double jdfnksjdfn() {
         int Radio;
-        System.out.println("Ingresa el tamaño del radio: ");
-        Scanner radio = new Scanner(System.in);
-        Radio = radio.nextInt();
+        
         double Area = Math.PI * Math.pow(Radio, 2) ;
         System.out.println("El área del circulo es de " + Area);
         return Area;
@@ -41,11 +48,11 @@ public class Circulo extends Figura{
 
     @Override
     protected void calcularArea() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        area = 
     }
 
     @Override
     protected void calcularPerimetro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        perimetro = 
     }
 }
