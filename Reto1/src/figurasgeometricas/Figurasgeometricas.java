@@ -49,7 +49,7 @@ public class Figurasgeometricas {
                     System.out.println("nt FIN DEL PROGRAMA");
                     break;
                 default:
-                    System.out.println(" \n");
+                    System.out.println(" \n La opcion no es valida");
             }
         }
     }
@@ -92,10 +92,6 @@ public class Figurasgeometricas {
     }
     
     private static void construirCuadrado() {
-//        System.out.println("\nAncho: ");
-//        double ancho = Double.parseDouble(teclado.nextLine());
-//        System.out.println("\nAlto: ");
-//        double alto = Double.parseDouble(teclado.nextLine());
         Cuadrado cuadrado = new Cuadrado(0, 0, "CUADRADO", 0,0);
         System.out.println("FIGURA: " + cuadrado.getNombre());
         System.out.println("ANCHO: " + cuadrado.getAncho());
