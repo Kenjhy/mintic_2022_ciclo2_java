@@ -80,6 +80,7 @@ public class Figurasgeometricas {
         System.out.println("\nRadio: ");
         double radio = Double.parseDouble(teclado.nextLine());
         Circulo circulo = new Circulo(radio, "CIRCULO UNO ", 0,0);
+        //circulo.setRadio(radio);
         System.out.println("Area Calculada: " + circulo.getArea());
         System.out.println("Parametro Calculada: " + circulo.getPerimetro());
         System.out.println("\n");
