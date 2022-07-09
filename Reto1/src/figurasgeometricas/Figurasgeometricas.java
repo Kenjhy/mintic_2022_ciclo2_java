@@ -6,6 +6,7 @@
 package figurasgeometricas;
 
 import Clases.Circulo;
+import Clases.Cuadrado;
 import Clases.Rectangulo;
 import Clases.Triangulo;
 import java.util.Scanner;
@@ -20,14 +21,15 @@ public class Figurasgeometricas {
 
     public static void main(String[] args) {
         String option = "";
-        while (!option.equals("4")) {
+        while (!option.equals("5")) {
             System.out.println("                 *** RETO NRO. 3 ***");
             System.out.println("*** APLICANDO PROGRAMACION ORIENTADA A OBJETOS ***");
             System.out.println("==================================================");
             System.out.println("[1] -- Construir un Rectangulo");
             System.out.println("[2] -- Construir un Triangulo");
             System.out.println("[3] -- Construir un Circulo");
-            System.out.println("[4] -- Construir un SALIR");
+            System.out.println("[4] -- Construir un Cuadrado");
+            System.out.println("[5] -- SALIR");
             System.out.println("Opcion:");
             option = teclado.nextLine();
             switch (option) {
@@ -41,10 +43,13 @@ public class Figurasgeometricas {
                     contruirCirculo();
                     break;
                 case "4":
+                    construirCuadrado();
+                    break;
+                case "5":
                     System.out.println("nt FIN DEL PROGRAMA");
                     break;
                 default:
-                    System.out.println(" \n");
+                    System.out.println(" \n La opcion no es valida");
             }
         }
     }
@@ -84,5 +89,17 @@ public class Figurasgeometricas {
         System.out.println("Area Calculada: " + circulo.getArea());
         System.out.println("Parametro Calculada: " + circulo.getPerimetro());
         System.out.println("\n");
+    }
+    
+    private static void construirCuadrado() {
+        Cuadrado cuadrado = new Cuadrado(0, 0, "CUADRADO", 0,0);
+        System.out.println("FIGURA: " + cuadrado.getNombre());
+        System.out.println("ANCHO: " + cuadrado.getAncho());
+        System.out.println("ALTO: " + cuadrado.getAlto());
+        System.out.println("AREA: " + cuadrado.getArea());
+        System.out.println("PERIMETRO: " + cuadrado.getPerimetro());
+        System.out.println("\n" );
+        
+        
     }
 }
