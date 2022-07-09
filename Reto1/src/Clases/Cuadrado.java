@@ -5,73 +5,48 @@
  */
 package Clases;
 
+import java.util.Scanner;
 
-public class Cuadrado {
-    //1.Crear la clase
-public abstract class Figura {
-    //2.Crear los atributos de la clase se deben getear y setear 
-    private String nombre;
-    private String color_borde;
-    private String color_fondo;
-    public double base;
-    public double altura;
-   
-    //3.Constructor Crea la plantilla por primera vez
-
-    public Figura(String nombre, String color_borde, String color_fondo, double base, double altura) {
-        this.nombre = nombre;
-        this.color_borde = color_borde;
-        this.color_fondo = color_fondo;
-        this.base = base;
-        this.altura = altura;
-    }
+public class Cuadrado extends Figura{
     
-    //4.Setear y getear todos los atributos 
+    double alto;
+    double ancho;
 
-    public String getNombre() {
-        return nombre;
+    public Cuadrado(double alto, double ancho, String nombre, double area, double perimetro) {
+        super(nombre, area, perimetro);
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese las medidas del cuadrado");
+        System.out.println("Nombre");
+        this.nombre = teclado.nextLine();
+        System.out.println("Introduzca el ancho: ");
+        this.ancho = teclado.nextDouble();
+        System.out.println("Introduzca el alto: ");
+        this.alto = teclado.nextDouble();
+        
+        calcularArea();
+        calcularPerimetro();
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public double getAlto() {
+        return alto;
     }
 
-    public String getColor_borde() {
-        return color_borde;
+    public void setAlto(double alto) {
+        this.alto = alto;
     }
 
-    public void setColor_borde(String color_borde) {
-        this.color_borde = color_borde;
+    public double getAncho() {
+        return ancho;
     }
 
-    public String getColor_fondo() {
-        return color_fondo;
+    public void setAncho(double ancho) {
+        this.ancho = ancho;
     }
 
-    public void setColor_fondo(String color_fondo) {
-        this.color_fondo = color_fondo;
-    }
-
-    public double getBase() {
-        return base;
-    }
-
-    public void setBase(double base) {
-        this.base = base;
-    }
-
-    public double getAltura() {
-        return altura;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
-    
     //5.Metodos propios de la clase 
     
     protected abstract void calcularArea();
     protected abstract void calcularPerimetro();
 
 }
-}
+
