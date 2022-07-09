@@ -7,7 +7,7 @@ package Clases;
 
 import java.util.Scanner;
 
-public class Cuadrado extends Figura{
+public class Cuadrado extends Figura {
     
     double alto;
     double ancho;
@@ -43,10 +43,15 @@ public class Cuadrado extends Figura{
         this.ancho = ancho;
     }
 
-    //5.Metodos propios de la clase 
-    
-    protected abstract void calcularArea();
-    protected abstract void calcularPerimetro();
+    @Override
+    protected void calcularArea() {
+       area = ancho*alto;
+    }
+
+    @Override
+    protected void calcularPerimetro() {
+       perimetro = ancho*ancho;
+    }
 
 }
 

@@ -9,11 +9,7 @@ package Clases;
  *
  * @author cristian.quiza
  */
-<<<<<<< HEAD
-public class Figura {
-    
-}
-=======
+
 public abstract class Figura {
 
     protected String nombre;
@@ -54,4 +50,3 @@ public abstract class Figura {
 
     protected abstract void calcularPerimetro();
 }
->>>>>>> 36da421abdb3209f54b92202796814b239548f36
