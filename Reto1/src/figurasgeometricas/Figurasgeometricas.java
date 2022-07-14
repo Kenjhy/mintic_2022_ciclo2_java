@@ -19,7 +19,7 @@ public class Figurasgeometricas {
 
     public static Scanner teclado = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {    
         String option = "";
         while (!option.equals("5")) {
             System.out.println("                 *** RETO NRO. 3 ***");
