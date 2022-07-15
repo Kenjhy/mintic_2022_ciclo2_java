@@ -1,12 +1,15 @@
-
 package formularios;
 
+import javax.swing.JOptionPane;
 
 public class frmFiguras extends javax.swing.JFrame {
 
+    javax.swing.ImageIcon iconoTilde
+            = new javax.swing.ImageIcon(getClass().getResource("/Iconos/tilde.gif"));
 
     public frmFiguras() {
         initComponents();
+        btnCalcularRec.setEnabled(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -17,7 +20,6 @@ public class frmFiguras extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -35,6 +37,22 @@ public class frmFiguras extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jPanel3 = new javax.swing.JPanel();
+        txtAnchoRec = new javax.swing.JTextField();
+        txtAltoRec = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        lblPerimetroRec = new javax.swing.JLabel();
+        lblAreaRec = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        lblTipoRec = new javax.swing.JLabel();
+        btnCalcularRec = new javax.swing.JButton();
+        btnLimpiarRec = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        lblTildeAnchoRec = new javax.swing.JLabel();
+        lblAltoRec = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PROGRAMA FIGURAS PLANAS");
@@ -64,19 +82,6 @@ public class frmFiguras extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Cuadrado", jPanel2);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 474, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 332, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Rectangulo", jPanel3);
 
         jLabel1.setText("ANCHO: (*)");
 
@@ -210,6 +215,154 @@ public class frmFiguras extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Triangulo", jPanel4);
 
+        txtAnchoRec.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtAnchoRecFocusLost(evt);
+            }
+        });
+        txtAnchoRec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAnchoRecActionPerformed(evt);
+            }
+        });
+        txtAnchoRec.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAnchoRecKeyTyped(evt);
+            }
+        });
+
+        txtAltoRec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAltoRecActionPerformed(evt);
+            }
+        });
+        txtAltoRec.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAltoRecKeyTyped(evt);
+            }
+        });
+
+        jLabel4.setText("ANCHO: (*)");
+
+        jLabel7.setText(" ALTO:  (*)");
+
+        lblPerimetroRec.setText("0.0");
+
+        lblAreaRec.setText("0.0");
+
+        jLabel10.setText("PERIMETRO :");
+
+        jLabel11.setText("AREA :");
+
+        jLabel12.setText("TIPO :");
+
+        lblTipoRec.setText("???");
+
+        btnCalcularRec.setText("Calcular");
+        btnCalcularRec.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCalcularRecMouseClicked(evt);
+            }
+        });
+        btnCalcularRec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularRecActionPerformed(evt);
+            }
+        });
+
+        btnLimpiarRec.setText("Limpiar");
+        btnLimpiarRec.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLimpiarRecMouseClicked(evt);
+            }
+        });
+        btnLimpiarRec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarRecActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("Los campos marcados con (*) Son OBLIGATORIOS");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtAltoRec, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtAnchoRec, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(65, 65, 65)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addComponent(lblAltoRec)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12))
+                        .addGap(19, 19, 19))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lblTildeAnchoRec)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel10)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblAreaRec, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPerimetroRec, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTipoRec, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(72, 72, 72))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(btnCalcularRec)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLimpiarRec)
+                .addGap(101, 101, 101))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtAnchoRec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPerimetroRec, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10)
+                    .addComponent(lblTildeAnchoRec))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblAreaRec, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAltoRec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblAltoRec))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(lblTipoRec, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalcularRec)
+                    .addComponent(btnLimpiarRec))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addGap(63, 63, 63))
+        );
+
+        jTabbedPane1.addTab("Rectangulo", jPanel3);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -246,12 +399,96 @@ public class frmFiguras extends javax.swing.JFrame {
         // TODO add your handling code here:
         double ancho = Double.parseDouble(txtAncho.getText());
         double alto = Double.parseDouble(txtAlto.getText());
-        double perimetro = ancho*2 + alto*2;
+        double perimetro = ancho * 2 + alto * 2;
         double area = ancho * alto;
-        
+
         txtArea.setText(String.valueOf(area));
         lblPerimetro.setText(String.valueOf(perimetro));
     }//GEN-LAST:event_btnCalcularMouseClicked
+
+    private void txtAltoRecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAltoRecActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAltoRecActionPerformed
+
+    private void txtAnchoRecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnchoRecActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAnchoRecActionPerformed
+
+    private void btnCalcularRecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularRecActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCalcularRecActionPerformed
+
+    private void btnLimpiarRecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarRecActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLimpiarRecActionPerformed
+
+    private void btnCalcularRecMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCalcularRecMouseClicked
+        // TODO add your handling code here:
+        //PROBLEMA TODA LA INFORMACIÓN INGRESADA Y MOSTRADA EN LOS OBJETOS
+        //CREADOS SON DE TIPO CADENA STRING 
+        //Integer.parseInt(cadena) Float.parseFloat(cadena)
+        if (txtAnchoRec.getText().equals("")
+                || txtAltoRec.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "FAVOR COMPLETAR LOS CAMPOS OBLIGADOS (*)");
+        } else {
+            double ancho = Double.parseDouble(txtAnchoRec.getText());
+            double alto = Double.parseDouble(txtAltoRec.getText());
+            double perimetro = ancho * 2 + alto * 2;
+            double area = ancho * alto;
+
+            lblAreaRec.setText(String.valueOf(area));
+            lblPerimetroRec.setText(String.valueOf(perimetro));
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCalcularRecMouseClicked
+
+    private void txtAnchoRecKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnchoRecKeyTyped
+        // TODO add your handling code here:
+        char tipoTecla = evt.getKeyChar();
+        if (!Character.isDigit(tipoTecla)) {
+            evt.consume();
+        }
+        int maximo = 3;
+        if (txtAnchoRec.getText().length() > maximo - 1) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtAnchoRecKeyTyped
+
+    private void txtAltoRecKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAltoRecKeyTyped
+        // TODO add your handling code here:
+        char tipoTecla = evt.getKeyChar();
+        if (!Character.isDigit(tipoTecla)) {
+            evt.consume();
+        }
+        int maximo = 3;
+        if (txtAltoRec.getText().length() > maximo - 1) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtAltoRecKeyTyped
+
+    private void btnLimpiarRecMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLimpiarRecMouseClicked
+        // TODO add your handling code here:
+        limpiarCajas();
+    }//GEN-LAST:event_btnLimpiarRecMouseClicked
+
+    private void txtAnchoRecFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtAnchoRecFocusLost
+        // TODO add your handling code here:
+        int maximo = 3;
+        if (txtAnchoRec.getText().equals("")) {
+            lblTildeAnchoRec.setIcon(iconoTilde);
+        } else {
+            lblTildeAnchoRec.setIcon(null);
+        }
+    }//GEN-LAST:event_txtAnchoRecFocusLost
+    public void activarBotones(){
+        btnCalcularRec.setEnabled(true);
+    } 
+    public void limpiarCajas() {
+        txtAnchoRec.setText("");
+        txtAltoRec.setText("");
+        lblPerimetroRec.setText("");
+        lblAreaRec.setText("");
+        lblTipoRec.setText("");
+    }
 
     /**
      * @param args the command line arguments
@@ -290,14 +527,22 @@ public class frmFiguras extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcular;
+    private javax.swing.JButton btnCalcularRec;
     private javax.swing.JButton btnLimpiar;
+    private javax.swing.JButton btnLimpiarRec;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -306,10 +551,17 @@ public class frmFiguras extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel lblAltoRec;
+    private javax.swing.JLabel lblAreaRec;
     private javax.swing.JLabel lblPerimetro;
+    private javax.swing.JLabel lblPerimetroRec;
+    private javax.swing.JLabel lblTildeAnchoRec;
     private javax.swing.JLabel lblTipo;
+    private javax.swing.JLabel lblTipoRec;
     private javax.swing.JTextField txtAlto;
+    private javax.swing.JTextField txtAltoRec;
     private javax.swing.JTextField txtAncho;
+    private javax.swing.JTextField txtAnchoRec;
     private javax.swing.JTextField txtArea;
     // End of variables declaration//GEN-END:variables
 }
