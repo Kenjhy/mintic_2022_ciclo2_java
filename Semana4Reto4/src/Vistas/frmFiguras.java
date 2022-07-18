@@ -121,7 +121,7 @@ public class frmFiguras extends javax.swing.JFrame {
         lblPerimetroTriangulo = new javax.swing.JLabel();
         lblTipoTriangulo = new javax.swing.JLabel();
         btnCalcularTriangulo = new javax.swing.JButton();
-        cmdLimpiarTriangulo = new javax.swing.JButton();
+        btnLimpiarTriangulo = new javax.swing.JButton();
         txtAreaTriangulo = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -843,7 +843,12 @@ public class frmFiguras extends javax.swing.JFrame {
             }
         });
 
-        cmdLimpiarTriangulo.setText("Limpiar");
+        btnLimpiarTriangulo.setText("Limpiar");
+        btnLimpiarTriangulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarTrianguloActionPerformed(evt);
+            }
+        });
 
         txtAreaTriangulo.setText("00");
 
@@ -871,7 +876,7 @@ public class frmFiguras extends javax.swing.JFrame {
                                     .addComponent(jLabel20)
                                     .addComponent(jLabel21)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(cmdLimpiarTriangulo)
+                                .addComponent(btnLimpiarTriangulo)
                                 .addGap(40, 40, 40)))
                         .addGap(26, 26, 26)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -908,7 +913,7 @@ public class frmFiguras extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcularTriangulo)
-                    .addComponent(cmdLimpiarTriangulo))
+                    .addComponent(btnLimpiarTriangulo))
                 .addContainerGap(401, Short.MAX_VALUE))
         );
 
@@ -1306,7 +1311,10 @@ public class frmFiguras extends javax.swing.JFrame {
 
     private void btnCalcularTrianguloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCalcularTrianguloMouseClicked
         // TODO add your handling code here:
-         // TODO add your handling code here:
+        if (txtAnchoTriangulo.getText().equals("")
+                || txtAltoTriangulo.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "FAVOR COMPLETAR LOS CAMPOS OBLIGADOS (*)");
+        } else {
         double ancho = Double.parseDouble(txtAnchoTriangulo.getText());
         double alto = Double.parseDouble(txtAltoTriangulo.getText());
         double perimetro = ancho * 2 + alto * 2;
@@ -1314,6 +1322,7 @@ public class frmFiguras extends javax.swing.JFrame {
 
         txtAreaTriangulo.setText(String.valueOf(area));
         lblPerimetroTriangulo.setText(String.valueOf(perimetro));
+        }
     }//GEN-LAST:event_btnCalcularTrianguloMouseClicked
 
     private void btnCalcularRectanguloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCalcularRectanguloMouseClicked
@@ -1416,6 +1425,11 @@ public class frmFiguras extends javax.swing.JFrame {
         // TODO add your handling code here:
         //ActualizarCirculos();
     }//GEN-LAST:event_btnActualziarCirculoActionPerformed
+
+    private void btnLimpiarTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarTrianguloActionPerformed
+        // TODO add your handling code here:
+        limpiarCajas();
+    }//GEN-LAST:event_btnLimpiarTrianguloActionPerformed
 
     public void limpiarCuadrado(){
         //int filas = tblRectangulos.getRowCount();
@@ -1555,6 +1569,11 @@ public class frmFiguras extends javax.swing.JFrame {
        txtRadioCirculo.setText("");
        lblPerimetroCirculo.setText("");
        txtAreaCirculo.setText("");
+       
+       txtAreaTriangulo.setText("");
+       txtAnchoTriangulo.setText("");
+       lblPerimetroTriangulo.setText("");
+       txtAltoTriangulo.setText("");
     }
     /**
      * @param args the command line arguments
@@ -1604,6 +1623,7 @@ public class frmFiguras extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminarTodosCuadrados;
     private javax.swing.JButton btnInsertarCirculo;
     private javax.swing.JButton btnInsertarCuadrado;
+    private javax.swing.JButton btnLimpiarTriangulo;
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnSalirCirculo;
     private javax.swing.ButtonGroup buttonGroup1;
@@ -1624,7 +1644,6 @@ public class frmFiguras extends javax.swing.JFrame {
     private javax.swing.JButton cmdLimpiar;
     private javax.swing.JButton cmdLimpiarCirculo;
     private javax.swing.JButton cmdLimpiarRectangulo;
-    private javax.swing.JButton cmdLimpiarTriangulo;
     private javax.swing.JButton cmdRadios;
     private javax.swing.JButton cmdRadioss;
     private javax.swing.ButtonGroup gradTriangulos;
