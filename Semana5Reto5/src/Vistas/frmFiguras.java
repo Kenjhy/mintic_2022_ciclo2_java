@@ -168,6 +168,11 @@ public class frmFiguras extends javax.swing.JFrame {
                 txtAnchoFocusLost(evt);
             }
         });
+        txtAncho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAnchoActionPerformed(evt);
+            }
+        });
         txtAncho.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtAnchoKeyTyped(evt);
@@ -819,6 +824,13 @@ public class frmFiguras extends javax.swing.JFrame {
 
         jLabel18.setText("Alto");
 
+        txtAnchoTriangulo.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                txtAnchoTrianguloInputMethodTextChanged(evt);
+            }
+        });
         txtAnchoTriangulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAnchoTrianguloActionPerformed(evt);
@@ -1435,6 +1447,14 @@ public class frmFiguras extends javax.swing.JFrame {
         //JOptionPane.showMessageDialog(null, "SELECCIONADA ANCHO: " + cadena); 
         
     }//GEN-LAST:event_tblCirculosMouseClicked
+
+    private void txtAnchoTrianguloInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_txtAnchoTrianguloInputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAnchoTrianguloInputMethodTextChanged
+
+    private void txtAnchoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnchoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAnchoActionPerformed
 
     public void limpiarCuadrado(){
         //int filas = tblRectangulos.getRowCount();
