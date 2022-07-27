@@ -676,6 +676,11 @@ public class frmFiguras extends javax.swing.JFrame {
                 btnCalcularCirculoMouseClicked(evt);
             }
         });
+        btnCalcularCirculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularCirculoActionPerformed(evt);
+            }
+        });
 
         cmdLimpiarCirculo.setText("Limpiar");
         cmdLimpiarCirculo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -964,6 +969,11 @@ public class frmFiguras extends javax.swing.JFrame {
         btnCalcularRectangulo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnCalcularRectanguloMouseClicked(evt);
+            }
+        });
+        btnCalcularRectangulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularRectanguloActionPerformed(evt);
             }
         });
 
@@ -1455,6 +1465,14 @@ public class frmFiguras extends javax.swing.JFrame {
     private void txtAnchoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnchoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAnchoActionPerformed
+
+    private void btnCalcularCirculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularCirculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCalcularCirculoActionPerformed
+
+    private void btnCalcularRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularRectanguloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCalcularRectanguloActionPerformed
 
     public void limpiarCuadrado(){
         //int filas = tblRectangulos.getRowCount();
