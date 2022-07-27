@@ -802,7 +802,7 @@ public class frmFiguras extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarRectanguloAccion
 
     private void btnActualizarRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarRectanguloActionPerformed
-        // TODO add your handling code here:
+        // TODO add your hand ling code here:
         actualizarRectangulos();
     }//GEN-LAST:event_btnActualizarRectanguloActionPerformed
 

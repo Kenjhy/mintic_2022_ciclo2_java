@@ -5,39 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10bf4aa2-7fc7-4aa3-a4b1-c7e4874b8e8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigurasGeometricas.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Clases/Circulo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Clases/Figura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Clases/Rectangulo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Clases/Triangulo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Iconos/tilde.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vistas/frmFiguras.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vistas/frmFiguras.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/figurasgeometricas/FigurasGeometricas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/IFormulas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/Figuras planas.mdj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/build.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/manifest.mf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/nbproject/build-impl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/nbproject/genfiles.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/nbproject/private/private.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/nbproject/private/private.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/nbproject/project.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/nbproject/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/src/Clases/Circulo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/src/Clases/Cuadrado.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/src/Clases/Figura.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/src/Clases/Rectangulo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/src/Clases/Triangulo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/src/Iconos/tilde.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/src/figurasgeometricas/Figurasgeometricas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/src/formularios/frmFiguras.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Reto1/src/formularios/frmFiguras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Semana 4/Semana4Reto4/Semana4Reto4/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Semana 4/Semana4Reto4/Semana4Reto4/nbproject/private/private.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,25 +32,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "244",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/ProyectsSoftware/FreeLancer/Java/MinticCiclo2/mintic_2022_ciclo2_java/ProyectosProfe/Semana 3/Intellj/FigurasGeometricas/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;244&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ProyectsSoftware/FreeLancer/Java/MinticCiclo2/mintic_2022_ciclo2_java/ProyectosProfe/Semana 3/Intellj/FigurasGeometricas/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\ProyectsSoftware\FreeLancer\Java\MinticCiclo2\mintic_2022_ciclo2_java\ProyectosProfe\Semana 3\Intellj\FigurasGeometricas\src" />
@@ -115,7 +84,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658025849677</updated>
-      <workItem from="1658025850865" duration="4698000" />
+      <workItem from="1658025850865" duration="5386000" />
+      <workItem from="1658172857898" duration="995000" />
     </task>
     <servers />
   </component>
